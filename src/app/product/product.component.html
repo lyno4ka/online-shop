@@ -1,0 +1,13 @@
+<div class="text-center wrapper">
+  <h2>{{product.title}}</h2>
+
+  <div class="flex-center">
+    <quill-view-html [content]="product.photo" [style]="{height: '300px'}"></quill-view-html>
+  </div>
+
+  <h2>{{product.price}} $</h2>
+
+  <button [routerLink]="['/product', product.id]" class="btn btn-dark">Open</button>
+
+  <button [routerLink]="['/cart']" (click)="addProduct(product)" class="btn btn-dark">Add to cart</button>
+</div>
